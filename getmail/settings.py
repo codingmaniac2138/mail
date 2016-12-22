@@ -111,6 +111,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+STATIC_ROOT='kdmail/static/'
 
 STATIC_URL = '/static/'
 
@@ -126,7 +127,7 @@ sched.start()
 
 def job_function():
     print "Hello World"
-    get_requirements()
+    # get_requirements()
 
 # Schedules job_function to be run on the third Friday
 # of June, July, August, November and December at 00:00, 01:00, 02:00 and 03:00
