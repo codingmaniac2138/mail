@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#EMAIL AUTHENTICATION
+# EMAIL AUTHENTICATION
 # https://www.google.com/settings/security/lesssecureapps
 # the above link is required for this email stuff.. coz you need to make your
 # mail accessible by Django application thus you need to TURN IT ON.
@@ -111,23 +111,30 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
-STATIC_ROOT='kdmail/static/'
+STATIC_ROOT = 'kdmail/static/'
 
 STATIC_URL = '/static/'
 
-AUTH_PROFILE_MODULE='userprofile.UserProfile'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
 
 from apscheduler.scheduler import Scheduler
 from kdmail.dice_api import get_requirements
 # Start the scheduler
 import logging
+
 logging.basicConfig()
 sched = Scheduler()
 sched.start()
 
+
 def job_function():
     print "Hello World"
     # get_requirements()
+
 
 # Schedules job_function to be run on the third Friday
 # of June, July, August, November and December at 00:00, 01:00, 02:00 and 03:00
