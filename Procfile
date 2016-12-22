@@ -1,0 +1,1 @@
+web: gunicorn getmail.wsgi --log-file -

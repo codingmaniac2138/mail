@@ -28,13 +28,16 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 #EMAIL AUTHENTICATION
+# https://www.google.com/settings/security/lesssecureapps
+# the above link is required for this email stuff.. coz you need to make your
+# mail accessible by Django application thus you need to TURN IT ON.
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kunjan.dhoble@consultadd.in'
-EMAIL_HOST_PASSWORD = 'changeiscool'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'myname@gmail.com'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'suhas.j@consultadd.com'
+# EMAIL_HOST_PASSWORD = 'myid@2138'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'myname@gmail.com'
 
 
 # Application definition
@@ -112,3 +115,19 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_PROFILE_MODULE='userprofile.UserProfile'
+
+from apscheduler.scheduler import Scheduler
+from kdmail.dice_api import get_requirements
+# Start the scheduler
+import logging
+logging.basicConfig()
+sched = Scheduler()
+sched.start()
+
+def job_function():
+    print "Hello World"
+    get_requirements()
+
+# Schedules job_function to be run on the third Friday
+# of June, July, August, November and December at 00:00, 01:00, 02:00 and 03:00
+sched.add_cron_job(job_function, minute='*/5')

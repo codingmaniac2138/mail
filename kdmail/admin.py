@@ -3,7 +3,7 @@ from .models import *
 # Register your models here.
 
 class edit_profile_admin(admin.ModelAdmin):
-    list_display = ['user','id_field','pass_field',]
+    list_display = ['user','consultant_name','technology','job_location','requested_email',]
 
     class Meta:
         model = edit_profile

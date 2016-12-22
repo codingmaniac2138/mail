@@ -2,23 +2,30 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 import datetime
+
+
 # from kdmail.templatetags import tags
 # Create your models here.
 
 
 class edit_profile(models.Model):
-    user=models.OneToOneField(User,primary_key=True)
-    id_field=models.TextField(default="Enter comma separated Gmail Ids")
-    pass_field=models.TextField(default="Enter comma separated passwords in sequence")
+    user = models.OneToOneField(User, primary_key=True)
+    consultant_name = models.TextField(default="Enter Candidates Name")
+    technology = models.TextField(default="Enter domain for which to be marketted")
+    job_location = models.TextField(default="Enter Job location for the Candidate")
+    requested_email = models.EmailField(default="Enter email you want to recv reqs")
+
     def __unicode__(self):
-        return self.id_field
+        return self.consultant_name
+
 
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
-        q= edit_profile()
+        q = edit_profile()
         q.user = instance
         q.save()
         # UserProfile.objects.create(user=instance)
+
 
 post_save.connect(create_user_profile, sender=User)
 
@@ -32,5 +39,4 @@ class EmailUser(models.Model):
         return self.user.username
 
     class Meta:
-        verbose_name_plural=u'User profiles'
-
+        verbose_name_plural = u'User profiles'

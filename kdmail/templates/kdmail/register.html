@@ -68,22 +68,6 @@
 
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="{% static "kdmail/js/plugins.js" %}"></script>
-{#     <script type="text/javascript">#}
-{#        // Toast Notification#}
-{#        $(window).load(function () {#}
-{#            setTimeout(function () {#}
-{#                Materialize.toast('<span>Hiya! I am a toast.</span>', 1500);#}
-{#            }, 1500);#}
-{#            setTimeout(function () {#}
-{#                Materialize.toast('<span>You can swipe me too!</span>', 3000);#}
-{#            }, 5000);#}
-{#            setTimeout(function () {#}
-{#                Materialize.toast('<span>You have new order.</span><a class="btn-flat yellow-text" href="index.html#">Read<a>', 3000);#}
-{#            }, 15000);#}
-{#        });#}
-{##}
-{##}
-{#    </script>#}
 </head>
 
 <body class="black">
@@ -98,37 +82,37 @@
 
 
   <div id="login-page" class="row">
-    <div class="col s12 z-depth-4 card-panel">
-      <form class="login-form" method="post" action="/getmail/register/">{% csrf_token %}
+    <div class="col s12 z-depth-4 card-panel" style="width:700px;opacity: 0.9">
+      <form name="myform" onsubmit="return validateForm()" class="login-form" method="post" action="/getmail/register/" style="width:700px">{% csrf_token %}
         <div class="row">
-          <div class="input-field col s12 center">
+          <div class="input-field col s12 center" >
             <h4>Register</h4>
             <p class="center">Join to our community now !</p>
           </div>
         </div>
-        <div class="row margin">
-          <div class="input-field col s12">
+        <div class="row">
+          <div class="input-field col s6" >
             <i class="mdi-social-person-outline prefix"></i>
            {{ form.username }}
             <label for="username" class="center-align">Username</label>
           </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
+{#        </div>#}
+{#        <div class="row margin">#}
+          <div class="input-field col s6">
             <i class="mdi-communication-email prefix"></i>
              {{ form.email }}
             <label for="email" class="center-align">Email</label>
           </div>
         </div>
         <div class="row margin">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <i class="mdi-action-lock-outline prefix"></i>
              {{ form.password1 }}
             <label for="password">Password</label>
           </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
+{#        </div>#}
+{#        <div class="row margin">#}
+          <div class="input-field col s6">
             <i class="mdi-action-lock-outline prefix"></i>
              {{ form.password2 }}
             <label for="password-again">Password again</label>
@@ -145,6 +129,28 @@
       </form>
     </div>
   </div>
+  <form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+Email: <input type="text" name="email">
+<input type="submit" value="Submit">
+</form>
+
+{#  ----------------------------------------------------------------------------------------------------------#}
+  <script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    alert(x);
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    alert(x.textContent);
+    var textos= x.textContent("consultadd")
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length ||textos) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+{#  ----------------------------------------------------------------------------------------------------#}
+
  <script type="text/javascript" src="{%  static "kdmail/js/jquery-1.11.2.min.js"%}"></script>
   <!--materialize js-->
   <script type="text/javascript" src="{%  static "kdmail/js/materialize.js"%}"></script>

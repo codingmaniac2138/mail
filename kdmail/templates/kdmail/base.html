@@ -84,7 +84,7 @@
 {#    </script>#}
 </head>
 
-<body>
+<body class="black">
  <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
@@ -99,9 +99,10 @@
                     <ul class="left">
 {#                      <li class="no-hover"><a href="index.html#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan"><i class="mdi-navigation-menu" ></i></a></li>#}
                       <li><img src="{%  static "kdmail/images/my.png"%}" alt="Smiley face" height="60" width="68"></li>
-                        <li style="margin-right: 652px;font-family:Verdana;font-size: xx-large"><strong>MAJESTIC MAIL</strong></li>
-                        <li><a href="/getmail/logout/"><h6 style="margin: 1.5rem"> LOGOUT </h6></a></li>
+                        <li style="margin-right: 500px;font-family:Verdana;font-size: xx-large"><strong>MAJESTIC MAIL</strong></li>
+                        <li><a href="/getmail/logout/" onclick="return confirm('Are you sure you want to logout?');"><h6 style="margin: 1.5rem"> LOGOUT </h6></a></li>
                                 <li><a href="/getmail/add_ids/"><h6 style="margin: 1.5rem"> EDIT CRED</h6></a></li>
+{% block global_link %}{% endblock %}
 {#                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-navigation-apps"></i></a>#}
 {#                        </li>#}
                     </ul>
