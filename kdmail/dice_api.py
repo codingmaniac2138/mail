@@ -49,7 +49,7 @@ def get_requirements():
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login(fromaddr, "changeiscool@31")
+        server.login(fromaddr, "myid@2138")
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
         server.quit()
