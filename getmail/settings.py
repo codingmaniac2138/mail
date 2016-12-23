@@ -144,7 +144,7 @@ sched.start()
 
 def job_function():
     print "Hello World"
-    get_requirements()
+    # get_requirements()
 
 
 # Schedules job_function to be run on the third Friday
