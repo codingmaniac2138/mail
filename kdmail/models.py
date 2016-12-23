@@ -6,7 +6,16 @@ import datetime
 
 # from kdmail.templatetags import tags
 # Create your models here.
+from django.contrib.auth.models import AbstractBaseUser
 
+class User(AbstractBaseUser):
+    """
+    Custom user class.
+    """
+    # email = models.EmailField('email address', unique=True, db_index=True)
+    # joined = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
+    # is_admin = models.BooleanField(default=False)
 
 class edit_profile(models.Model):
     user = models.OneToOneField(User, primary_key=True)

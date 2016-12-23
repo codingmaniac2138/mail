@@ -697,8 +697,9 @@ def welcome(request):
 
     return render_to_response('kdmail/welcome.html', {'b_json': b_json},
                               context_instance=RequestContext(request))
+from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt
 def register_view(request):
     args = {}
     args.update(csrf(request))
@@ -706,9 +707,14 @@ def register_view(request):
         form = MyForm(request.POST)
         args['form'] = form
         if form.is_valid():
-            userid = request.user.id
-            user = User.objects.get(id=userid)
-            user.is_active = True
+            # username = form.cleaned_data['username']
+            # user = User.objects.get(username=username)
+            # user.is_active = False
+            # user.save()
+            # userid = request.user.id
+            # print userid,"oooooooooooooooo"
+            # user = User.objects.get(id=userid)
+            # user.is_active = True
             print form,"oooooooooooooooooooooooooooo"
             form.save()  # save user to database if form is valid
             # email = form.cleaned_data['email']

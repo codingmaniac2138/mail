@@ -117,6 +117,7 @@
              {{ form.password2 }}
             <label for="password-again">Password again</label>
           </div>
+            <input type="hidden" name="is_active" value="True">
         </div>
         <div class="row">
           <div class="input-field col s12">
@@ -129,10 +130,6 @@
       </form>
     </div>
   </div>
-  <form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
-Email: <input type="text" name="email">
-<input type="submit" value="Submit">
-</form>
 
 {#  ----------------------------------------------------------------------------------------------------------#}
   <script>
