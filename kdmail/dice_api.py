@@ -36,7 +36,7 @@ def get_requirements():
         # pp.pprint(a)
         print(len(a))
 
-        fromaddr = "kunjan.d@consultadd.com"
+        fromaddr = "suhas.j@consultadd.com"
 
         toaddr = idata.requested_email
         msg = MIMEMultipart()

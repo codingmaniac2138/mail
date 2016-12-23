@@ -60,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getmail/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8669951">
+            <state vertical-scroll-proportion="0.0">
               <caret line="151" column="44" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="44" />
               <folding />
             </state>
@@ -125,6 +125,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dice_api.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kdmail/dice_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20197044">
+              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+              <folding>
+                <element signature="e#18#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -157,7 +169,6 @@
         <option value="$PROJECT_DIR$/kdmail/urls.py" />
         <option value="$PROJECT_DIR$/kdmail/form.py" />
         <option value="$PROJECT_DIR$/kdmail/admin.py" />
-        <option value="$PROJECT_DIR$/kdmail/dice_api.py" />
         <option value="$PROJECT_DIR$/procfile.txt" />
         <option value="$PROJECT_DIR$/kdmail/templates/kdmail/base.html" />
         <option value="$PROJECT_DIR$/kdmail/templates/kdmail/welcome.html" />
@@ -167,6 +178,7 @@
         <option value="$PROJECT_DIR$/kdmail/templates/kdmail/register.html" />
         <option value="$PROJECT_DIR$/kdmail/templates/kdmail/add_ids.html" />
         <option value="$PROJECT_DIR$/getmail/settings.py" />
+        <option value="$PROJECT_DIR$/kdmail/dice_api.py" />
       </list>
     </option>
   </component>
@@ -901,16 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kdmail/dice_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#18#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kdmail/templates/kdmail/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6666667">
@@ -1050,14 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kdmail/templates/kdmail/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667">
-          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kdmail/templates/kdmail/add_ids.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.3333335">
@@ -1078,9 +1072,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getmail/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8669951">
+        <state vertical-scroll-proportion="0.0">
           <caret line="151" column="44" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kdmail/templates/kdmail/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667">
+          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kdmail/dice_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20197044">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="e#18#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
