@@ -18,6 +18,17 @@ class edit_profile(models.Model):
     def __unicode__(self):
         return self.consultant_name
 
+class user_stats(models.Model):
+    user = models.ForeignKey(User)
+    consultant_name = models.TextField(default="Enter Candidates Name")
+    technology = models.TextField(default="Enter domain for which to be marketted")
+    job_location = models.TextField(default="Enter Job location for the Candidate")
+    requested_email = models.EmailField(default="email")
+    requirements_count = models.IntegerField()
+    date_added = models.DateField(default=datetime.date.today())
+
+    def __unicode__(self):
+        return self.user
 
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
