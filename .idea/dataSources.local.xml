@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="db" uuid="f2503542-6c3c-4a9e-ae7b-7ac8b07f0a2c">
-      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
+    <data-source name="db" uuid="3493a30f-6c23-4571-b8da-cf1430362853" />
+    <data-source name="Django default" uuid="41fd32ac-fff9-40c8-83d9-037b9dfd5d4c">
+      <first-sync>true</first-sync>
     </data-source>
   </component>
 </project>

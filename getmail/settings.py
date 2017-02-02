@@ -144,9 +144,11 @@ sched.start()
 
 def job_function():
     print "Hello World"
-    get_requirements()
+    # get_requirements()
 
 
 # Schedules job_function to be run on the third Friday
 # of June, July, August, November and December at 00:00, 01:00, 02:00 and 03:00
-sched.add_cron_job(job_function, minute='*/5')
+
+# sched.add_cron_job(job_function, minute='*/5')
+
