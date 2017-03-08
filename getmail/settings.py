@@ -110,8 +110,6 @@ USE_TZ = True
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
@@ -120,15 +118,6 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-# # Static files (CSS, JavaScript, Images)
-# # https://docs.djangoproject.com/en/1.8/howto/static-files/
-# STATIC_ROOT = 'kdmail/static/'
-#
-# STATIC_URL = '/static/'
-#
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
 
 AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
 
@@ -150,5 +139,5 @@ def job_function():
 # Schedules job_function to be run on the third Friday
 # of June, July, August, November and December at 00:00, 01:00, 02:00 and 03:00
 
-# sched.add_cron_job(job_function, minute='*/5')
+sched.add_cron_job(job_function, minute='*/5')
 

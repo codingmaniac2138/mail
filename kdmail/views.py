@@ -856,8 +856,9 @@ def add_ids_view(request):
         instance = None
 
     if request.method == 'POST':
-
+        print("oooooooooooooooooooooooooooooooooooooooooooooo")
         form = edit_profile_form(request.POST or None, request.FILES, instance=instance)
+        print(form, "akhahkgd")
         if form.is_valid():
             data = form.save(commit=False)
             data.user = request.user

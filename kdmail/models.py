@@ -28,14 +28,13 @@ class user_stats(models.Model):
     date_added = models.DateField(default=datetime.date.today())
 
     def __unicode__(self):
-        return self.user
+        return unicode(self.user)
 
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         q = edit_profile()
         q.user = instance
         q.save()
-        # UserProfile.objects.create(user=instance)
 
 
 post_save.connect(create_user_profile, sender=User)

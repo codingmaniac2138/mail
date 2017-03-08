@@ -28,14 +28,12 @@ def send_mail_func(body,toaddr):
 
 def get_requirements():
     consultant_data = edit_profile.objects.all()
-    # java_users = edit_profile.objects.filter(technology__contains="java").values('user_id')
-    for tech in ["python","java"]:
+
+    for tech in ["python","java","data science"]:
         tech_users = edit_profile.objects.filter(technology__contains=tech).values('user_id')
-        # tech_users = edit_profile.objects.filter(technology__contains=tech).filter(job_location__contains="Chicago").values('user_id')
         tech_ids = [elem['user_id'] for elem in tech_users]
         len_users = len(tech_ids)
-        # city = tech_users[0]['job_location']
-        # skill = tech_users[0]['technology']
+
         consultant_data = edit_profile.objects.get(user_id=tech_ids[0])
         skill = consultant_data.technology
         city = consultant_data.job_location
@@ -49,9 +47,11 @@ def get_requirements():
             main_dict[str(nextUrl.split("page=")[1])] = json.loads(req.text)['resultItemList']
             try:
                 nextUrl = json.loads(req.text)['nextUrl']
-                # print(nextUrl)
+
             except:
+
                 break
+
         no_c2c= 'No C2C'
         c2c = 'C2C'
         a = re.compile(r'\b%s\b' % (no_c2c))
@@ -73,8 +73,8 @@ def get_requirements():
         mail_division_count = len(a)/ len_users
         count = 0
         for kd in range(len_users):
-            b=a[count:count+mail_division_count]
-            count+=mail_division_count
+            b = a[count:count+mail_division_count]
+            count += mail_division_count
 
             body = "".join(b)
             idata = edit_profile.objects.get(user_id=tech_ids[kd])
