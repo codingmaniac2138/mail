@@ -6,7 +6,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>WELCOME</title>
-
+    {##}
     <link rel="stylesheet" href="{% static 'kdmail/css/materialize.css' %}">
 
     <link rel="stylesheet" href="{% static 'kdmail/css/materialize.min.css' %}">
@@ -15,127 +15,112 @@
     <link rel="stylesheet" href="{% static 'kdmail/js/materialize.min.js' %}">
 
     <link rel="stylesheet" href="{% static 'kdmail/js/materialize.js' %}">
-
-    <link rel="stylesheet" href="{% static 'kdmail/js/plugins/chartjs/chart.min.js' %}">
+    {##}
+    {#    <link rel="stylesheet" href="{% static 'kdmail/js/plugins/chartjs/chart.min.js' %}">#}
+    <link rel="stylesheet" href="{% static 'kdmail/css/corousel_css/demo.css' %}">
+    <link rel="stylesheet" href="{% static 'kdmail/css/corousel_css/style4.css' %}">
+    <script type="text/javascript" src="{% static 'kdmail/js/corousel_js/modernizr.custom.86080.js' %}"></script>
 
 </head>
-{#<body style="background:url('{{ STATIC_URL }}kdmail/images/background.png')">#}
-<body style="background-repeat:no-repeat " background="{% static "kdmail/images/sl2.jpg" %}">
-{#<body>#}
+<body>
+
 <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
 </div>
+
 <nav style="background-color: darkslategrey">
     <div class="nav-wrapper">
 
-{#        <a href="#" class="brand-logo"><img src="{% static "kdmail/images/my.png" %}" alt="Smiley face" height="60"#}
-{#                                            width="68"></a>#}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li style="margin-right: 822px;font-family:Verdana;font-size: xx-large"><strong>MAJESTIC MAIL</strong></li>
-            {% if user.is_authenticated %}
-
-                <li><a href="/getmail/add_ids/">UPDATE DETAILS</a></li>
-                <li><a href="/getmail/login/">LOGOUT</a></li>
-            {% else %}
-                <li><a href="/getmail/login/">Login</a></li>
-                <li><a href="/getmail/register/">Signup</a></li>
-                {#        <li><a href="collapsible.html">JavaScript</a></li>#}
-            {% endif %}
+            <li style="margin-right: 1022px;font-family:Verdana;font-size: xx-large"><strong>MAJESTIC MAIL</strong></li>
+            {#            {% if user.is_authenticated %}#}
+            {##}
+            {#                <li><a href="/getmail/add_ids/">UPDATE DETAILS</a></li>#}
+            {#                <li><a href="/getmail/login/">LOGOUT</a></li>#}
+            {#            {% else %}#}
+            {#                <li><a href="/getmail/login/">Login</a></li>#}
+            {#                <li><a href="/getmail/register/">Signup</a></li>#}
+            {#        <li><a href="collapsible.html">JavaScript</a></li>#}
+            {#            {% endif %}#}
         </ul>
     </div>
 </nav>
+<div>
+    <ul class="cb-slideshow">
 
+        <li><span>Image 02</span>
+
+            <div><h3>No more Searching On Job Sites</h3></div>
+        </li>
+        <li><span>Image 03</span>
+
+            <div><h3>Get Requirements On your Email</h3></div>
+        </li>
+        <li><span>Image 01</span>
+
+            <div><h3>Just Update Only One Form</h3></div>
+        </li>
+        <li><span>Image 04</span>
+
+            <div><h3>Get Statistics Of Technology wise requirements Daily</h3></div>
+        </li>
+        <li><span>Image 05</span>
+
+            <div><h3>Analyse Market Trend on Web-development Projects </h3></div>
+        </li>
+        <li><span>Image 06</span>
+
+            <div><h3>Track Marketers Performance</h3></div>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    {% if user.is_authenticated %}
+
+        <header>
+
+            <div class="row" style="margin-left: 100px;margin-top: 200px">
+                <div class="col s12 m6">
+
+                    <a class="waves-effect waves-light btn-large" href="/getmail/add_ids/">UPDATE DETAILS</a>
+                </div>
+                <div class="col s12 m6">
+                    <a class="waves-effect waves-light btn-large" href="/getmail/login/">LOGOUT</a>
+
+                </div>
+            </div>
+
+            {% else %}
+            <div class="row" style="margin-top: 200px">
+                <div class="col s12 m6">
+                    <a class="waves-effect waves-light btn-large" href="/getmail/login/">Login</a>
+                </div>
+
+                <div class="col s12 m6">
+                    <li><a class="waves-effect waves-light btn-large" href="/getmail/register/">Signup</a></li>
+                </div>
+            </div>
+        </header>
+
+    {% endif %}
+
+
+</div>
 <p><strong><h1 style="color: #ffffff"></h1></strong></p>
 
-
-{#<form action="/getmail/results/" method="post">{% csrf_token %}#}
-{#    <input id="mail_name" name="username" type="email" placeholder="Enter Gmail ID">#}
-{#        <input id="mail_pwd" name="pwd" type="password" placeholder="Enter Password">#}
-{#<br>#}
-{#    <input style="color:navajowhite" class="btn waves-effect waves-light" id="click" name="btn" type="submit" value="LOGIN >>">#}
-{#</form>#}
-{#{{ b_json }}#}
 <div>
-{#    <canvas id="doughnut-chart" height="100"></canvas>#}
+
     <div id="cool">
-        {#    vgjhhhhhhhhhhhhhhhhhggggggggghhhhhhhhhhhhhhhhhhh#}
-        {#{{ b_json }}#}
+
+
     </div>
-    {#<div id="toast-container" ></div>#}
+
 </div>
 </body>
 
 
 <script type="text/javascript" src="{% static 'kdmail/js/plugins/chartjs/chart.min.js' %}"></script>
-<script>
-    var doughnutData = [
-        {
-            value: 3000,
-            color: "#F7464A",
-            highlight: "#FF5A5E",
-            label: "Mobile"
-        },
-        {
-            value: 2000,
-            color: "#46BFBD",
-            highlight: "#5AD3D1",
-            label: "Kitchen"
-        },
-        {
-            value: 1000,
-            color: "#FDB45C",
-            highlight: "#FFC870",
-            label: "Home"
-        }
-    ];
 
-    var d = "{{ b_json }}";
-    {#var x = JSON.parse(d);#}
-
-    window.onload = function () {
-        {#     var a=document.getElementById("cool").innerHTML#}
-        {#           alert(typeof("{{ b_json }}"));#}
-        {#           alert(typeof(a));#}
-        {##}
-        {#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    #}
-
-        {#    for(var key in doughnutData) {#}
-        {#    var value = doughnutData[key];#}
-        {#            alert(value.value);#}
-        {##}
-        {#    }#}
-
-
-        {#??????????????????????#}
-        {#count=0;#}
-        {#    {% for i in b_json %}#}
-        {#alert(count);#}
-        {#    alert(typeof ({{ b_json|safe }}));#}
-        {#count++;#}
-        {#    {% endfor %}#}
-
-
-
-        {##}
-        {#var x=jQuery.parseJSON(a);#}
-        {##}
-        {#    alert("MAIn"+typeof(x));#}
-
-        {#                alert("{{ b_json }}");#}
-
-        var doughnutChart = document.getElementById("doughnut-chart").getContext("2d");
-        window.myDoughnut = new Chart(doughnutChart).Doughnut({{ b_json|safe }}, {
-            segmentStrokeColor: "#fff",
-            tooltipTitleFontFamily: "'Roboto','Helvetica Neue', 'Helvetica', 'Arial', sans-serif",// String - Tooltip title font declaration for the scale label
-            percentageInnerCutout: 50,
-            animationSteps: 15,
-            segmentStrokeWidth: 4,
-            animateScale: true,
-            percentageInnerCutout: 60,
-            responsive: true
-        });
-    };
-</script>
 </html>
